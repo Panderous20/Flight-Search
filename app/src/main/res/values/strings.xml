@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flight Search v2</string>
+    <string name="flight_search">Flight Search</string>
+    <string name="search_airport">Search Airport</string>
+</resources>
