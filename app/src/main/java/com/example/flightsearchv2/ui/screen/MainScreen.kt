@@ -21,15 +21,15 @@ import com.example.flightsearchv2.ui.viewModel.SearchViewModel
 
 @Composable
 fun MainScreen(
+    searchViewModel: SearchViewModel = viewModel(factory = SearchViewModel.Factory),
+    flightViewModel: FlightViewModel = viewModel(factory = FlightViewModel.Factory)
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
 
-    val searchViewModel: SearchViewModel = viewModel(factory = SearchViewModel.Factory)
     val searchUiState by searchViewModel.searchUiState.collectAsState()
     val suggestList by searchViewModel.suggestList.collectAsState()
 
-    val flightViewModel: FlightViewModel = viewModel(factory = FlightViewModel.Factory)
     val flightUiState by flightViewModel.flightUiState.collectAsState()
     val flightAdd by flightViewModel.flightAdd.collectAsState()
 
